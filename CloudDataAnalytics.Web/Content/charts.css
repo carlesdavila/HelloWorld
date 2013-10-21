@@ -1,0 +1,167 @@
+﻿
+.layout {
+    font-family: 'Segoe UI',Helvetica,'Droid Sans',Tahoma,Geneva,sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    position: relative;
+    width: 1270px;
+}
+.light .layout {
+    background-color: #FFFFFF;
+}
+.header-text {
+    font-family: 'Segoe UI Light','Helvetica Neue Light','Segoe UI','Helvetica Neue',Helvetica,'Trebuchet MS','Droid Sans',Tahoma,Geneva,sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    margin-left: 100px;
+    padding: 60px 0 0;
+}
+.dark .header-text {
+    color: #FFFFFF;
+}
+.light .header-text {
+    color: #43474B;
+}
+.img-theme {
+    background-image: url("sprite.png");
+    background-position: -90px 0;
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    right: 100px;
+    top: 60px;
+    width: 60px;
+    z-index: 101;
+}
+.light .img-theme {
+    background-position: 0 0;
+}
+.content {
+    height: 750px;
+    padding: 40px 100px;
+    width: 1070px;
+}
+.slide-button {
+    background-image: url("sprite.png");
+    cursor: pointer;
+    height: 80px;
+    position: absolute;
+    top: 430px;
+    width: 40px;
+}
+.slide-button.right-button {
+    background-position: -90px -55px;
+    right: 0;
+}
+.light .slide-button.right-button {
+    background-position: 0 -55px;
+}
+.slide-button.left-button {
+    background-position: -135px -55px;
+    left: 0;
+}
+.light .slide-button.left-button {
+    background-position: -45px -55px;
+}
+.rowChartChart {
+    height: 180px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 1070px;
+}
+.traffic .rowChart {
+    height: 340px;
+}
+.legend-rowChart {
+    height: 17px;
+    position: relative;
+    width: 1500px;
+}
+.legend {
+    color: #43474B;
+    float: left;
+    font-family: 'Segoe UI',Helvetica,'Droid Sans',Tahoma,Geneva,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 3px;
+    z-index: 10;
+}
+.light .legend {
+    color: #43474B;
+}
+.hr {
+    border-bottom: 1px solid #6B7289;
+    float: left;
+    height: 10px;
+    width: 1100px;
+}
+.light .hr {
+    border-bottom: 1px solid #C0C0C0;
+}
+.clear {
+    clear: both;
+}
+.helth .rowChart .col1Chart {
+    float: left;
+    height: 170px;
+    width: 210px;
+}
+.traffic .rowChart .col1Chart {
+    float: left;
+    height: 320px;
+    overflow: hidden;
+    width: 420px;
+}
+.helth .rowChart .col2Chart {
+    float: left;
+    height: 175px;
+    margin: -10px 0 0;
+    width: 210px;
+}
+.traffic .rowChart .col2Chart {
+    float: right;
+    height: 320px;
+    overflow: hidden;
+    width: 600px;
+}
+.helth .rowChart .col3 {
+    float: left;
+    height: 165px;
+    width: 650px;
+}
+.col1Chart .text {
+    color: #8E93A7;
+    font-size: 11px;
+    margin-top: 20px;
+    width: 200px;
+    word-wrap: normal;
+}
+.col1Chart .label-value {
+    font-family: 'Segoe UI Semibold','Helvetica Neue Medium','Segoe UI','Helvetica Neue',Helvetica,'Droid Sans',Tahoma,Geneva,sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+}
+label#requestNumber {
+    color: #7CD2C7;
+}
+.light label#requestsNumber {
+    color: #76C8BD;
+}
+label#CPU {
+    color: #75C0E0;
+}
+label#memoryConsumption {
+    color: #7E8AB6;
+}
+.light label#memoryConsumption {
+    color: #96A3D4;
+}
+.traffic .chart-container {
+    height: 300px;
+    width: inherit;
+}
+.traffic .chartContainer {
+    height: 300px;
+    width: inherit;
+}

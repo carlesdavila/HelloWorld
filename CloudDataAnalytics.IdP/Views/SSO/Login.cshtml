@@ -1,0 +1,87 @@
+﻿@model CloudDataAnalytics.IdP.Models.LoginRequest
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap/bootstrap-theme.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; 
+      }
+      .container {
+        width: 300px;
+      }
+
+      /* The white background content wrapper */
+      .container > .content {
+        background-color: white;
+        padding: 20px;
+        margin: 0 -20px; 
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+	  .login-form {
+		padding: 20px 20px 20px 20px
+	  }
+	
+	  legend {
+		margin-right: -50px;
+		font-weight: bold;
+	  	color: #404040;
+	  }
+
+    </style>
+</head>
+    <body>
+        
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+            <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form role="form" >
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.UserName)
+                                    @Html.TextBoxFor(m => m.UserName,null,new { @class = "form-control"})
+                                    @Html.ValidationMessageFor(m => m.UserName)
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password)
+                                    @Html.PasswordFor(m => m.Password,new { @class = "form-control"})
+                                    @Html.ValidationMessageFor(m => m.Password)
+                                </div>
+                                <button class="btn btn-default" type="submit">Sign in</button>
+                                <p>@ViewBag.ErrorMessage</p>
+                        </form>
+                        <b>Use login as password!</b>
+                        <br/>
+                        Allowed users (only admin are listed): 
+                        @ViewBag.Logins
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+    }
+    </body>
+</html>

@@ -1,0 +1,17 @@
+﻿<section class="view">
+    <header>
+        <div class="jumbotron">
+            <h2 class="page-title" data-bind ="text: title"></h2>
+        </div>
+    </header>
+    <div class="container">
+        <section class="row" data-bind="foreach: reports" >
+            <div class="col-lg-4">
+                <a href="#" class="thumbnail">
+                    <img data-bind="attr: { src: imageName }" class="img-responsive"/> 
+                <address class="text-center" data-bind="text: typeName"></address>      
+                </a>     
+            </div>
+        </section>
+   </div>
+</section>
